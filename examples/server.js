@@ -85,6 +85,7 @@ function registerBaseRouter () {
     let msg = []
     req.on('data', (chunk) => {
       if (chunk) {
+        console.log(chunk)
         msg.push(chunk)
       }
     })
