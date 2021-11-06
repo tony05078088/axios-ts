@@ -6,7 +6,7 @@ function normalizeHeaderName(headers: any, normalizeName: string): void {
   }
   Object.keys(headers).forEach(name => {
     if (name !== normalizeName && name.toUpperCase() === normalizeName.toUpperCase()) {
-      //把小寫的賦值給原先大寫的位置
+      // 把小寫的賦值給原先大寫的位置
       headers[normalizeName] = headers[name]
       delete headers[name]
     }
@@ -32,7 +32,7 @@ export function parseHeaders(headers: string): any {
   headers.split('\r\n').forEach(line => {
     let [key, val] = line.split(':')
     key = key.trim().toLowerCase()
-    //若是空字串
+    // 若是空字串
     if (!key) {
       return
     }
