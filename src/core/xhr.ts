@@ -51,6 +51,7 @@ export default function xhr(config: AxiosRequestConfig): AxiosPromise {
       if (data === null && name.toLowerCase() === 'content-type') {
         delete headers[name]
       } else {
+        console.log(name, headers[name])
         request.setRequestHeader(name, headers[name])
       }
     })
